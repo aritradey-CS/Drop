@@ -1,18 +1,25 @@
 /* src/components/Signup.css */
 
 /* Base styles for the Signup section */
-.app{
-    background-color: #007bffab;
-}
-.signup {
-    background-color: #535a59;
+.app {
+    background-color:  #9632d8e0;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .signup {
+    background-color: #25ce0e;
     padding: 20px;
+    border: 2px solid black;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   h2 {
     text-align: center;
+    color: #ebebebfd;
   }
   
   /* Styles for the form container */
@@ -41,6 +48,7 @@
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
+    color: #fff;
   }
   
   input[type='text'],
@@ -57,8 +65,8 @@
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #5e6872;
-    color: #fff;
+    background-color: #f3f3f3;
+    color: #000000;
     border: 2px solid black;
     border-radius: 4px;
     cursor: pointer;
@@ -66,23 +74,7 @@
   }
   
   button:hover {
-    background-color: #d7dadd;
-  }
-  
-  /* Button to toggle extended fields */
-  .toggle-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    font-weight: bold;
-    color: #007bff;
-    transition: color 0.3s ease;
-  }
-  
-  .toggle-btn:hover {
-    color: #0056b3;
+    background-color: #ff0800;
   }
   
   /* Additional styles for Login section */
@@ -101,5 +93,8 @@
   .login.visible {
     max-height: 1000px;
     opacity: 1;
+    border: 2px solid black;
+    background-color: #00a4d6;
+    color: #333;
   }
   
