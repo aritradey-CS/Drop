@@ -1,5 +1,6 @@
 // src/components/Signup.js
 import React, { useState } from 'react';
+import './Signup.css';
 
 const Signup = () => {
   const [showExtendedFields, setShowExtendedFields] = useState(false);
@@ -9,39 +10,40 @@ const Signup = () => {
   };
 
   return (
-    <div className="section">
+    <div className="section signup">
       <h2>Create New Account</h2>
-      {showExtendedFields ? (
+      <div className={`form-container ${showExtendedFields ? 'extended' : 'basic'}`}>
         <form>
-          <label>
-            User Name:
+          <div className="form-group">
+            <label>User Name:</label>
             <input type="text" />
-          </label>
-          <label>
-            User ID:
+          </div>
+          <div className="form-group">
+            <label>User ID:</label>
             <input type="text" />
-          </label>
-          <label>
-            Password:
+          </div>
+          <div className="form-group">
+            <label>Password:</label>
             <input type="password" />
-          </label>
-          <label>
-            Mobile Number:
-            <input type="text" />
-          </label>
-          <label>
-            Email ID:
-            <input type="text" />
-          </label>
+          </div>
+          {showExtendedFields && (
+            <div>
+              <div className="form-group">
+                <label>Mobile Number:</label>
+                <input type="text" />
+              </div>
+              <div className="form-group">
+                <label>Email ID:</label>
+                <input type="text" />
+              </div>
+            </div>
+          )}
           <button type="submit">Sign Up</button>
         </form>
-      ) : (
-        <div>
-          {/* Basic fields */}
-          <p>Basic Fields</p>
-          <button onClick={toggleFields}>Show Extended Fields</button>
-        </div>
-      )}
+      </div>
+      <button className="toggle-btn" onClick={toggleFields}>
+        {showExtendedFields ? 'Hide Extended Fields' : 'Show Extended Fields'}
+      </button>
     </div>
   );
 };
