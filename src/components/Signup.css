@@ -1,8 +1,11 @@
 /* src/components/Signup.css */
 
 /* Base styles for the Signup section */
+.app{
+    background-color: #007bffab;
+}
 .signup {
-    background-color: #f7f7f7;
+    background-color: #535a59;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -54,16 +57,16 @@
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #5e6872;
     color: #fff;
-    border: none;
+    border: 2px solid black;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #d7dadd;
   }
   
   /* Button to toggle extended fields */
